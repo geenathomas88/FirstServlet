@@ -15,6 +15,7 @@ public class FirstServlet extends HttpServlet{
 		System.out.println("Servlet Initialized");
 	}
 	
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
