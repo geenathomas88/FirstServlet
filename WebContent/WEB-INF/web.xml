@@ -7,5 +7,85 @@
 	<servlet-mapping>
 		<servlet-name>dummy</servlet-name>
 		<url-pattern>/sample</url-pattern>
-	</servlet-mapping>>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>displayheader</servlet-name>
+		<servlet-class>com.servlet.DisplayHeader</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>displayheader</servlet-name>
+		<url-pattern>/displayheader</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>sessiondetails</servlet-name>
+		<servlet-class>com.servlet.SessionExample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sessiondetails</servlet-name>
+		<url-pattern>/sessiondetails</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>autorefresh</servlet-name>
+		<servlet-class>com.servlet.AutorefreshExample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>autorefresh</servlet-name>
+		<url-pattern>/currenttime</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>setattribute</servlet-name>
+		<servlet-class>com.servlet.Servlet1</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>setattribute</servlet-name>
+		<url-pattern>/setattribute</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>getattribute</servlet-name>
+		<servlet-class>com.servlet.Servlet2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getattribute</servlet-name>
+		<url-pattern>/getattribute</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+		<servlet-name>config</servlet-name>
+		<servlet-class>com.servlet.ConfigServlet</servlet-class>
+		<init-param>
+			<param-name>uname</param-name>
+			<param-value>Geena</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>config</servlet-name>
+		<url-pattern>/configservlet</url-pattern>
+	</servlet-mapping>
+	
+	<context-param>
+		<param-name>dbName</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	
+	<context-param>  
+		<param-name>username</param-name>  
+		<param-value>system</param-value>  
+	</context-param>  
+	  
+	<context-param>  
+		<param-name>password</param-name>  
+		<param-value>oracle</param-value>  
+	</context-param>
+	
 </web-app>
