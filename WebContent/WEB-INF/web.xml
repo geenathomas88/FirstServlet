@@ -8,6 +8,15 @@
 		<servlet-name>dummy</servlet-name>
 		<url-pattern>/sample</url-pattern>
 	</servlet-mapping>
+
+	<filter>
+		<filter-name>inputvalidate</filter-name>
+		<filter-class>com.filter.InputValidationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>inputvalidate</filter-name>
+		<url-pattern>/sample</url-pattern>
+	</filter-mapping>
 	
 	<servlet>
 		<servlet-name>displayheader</servlet-name>
@@ -21,7 +30,7 @@
 	
 	<servlet>
 		<servlet-name>sessiondetails</servlet-name>
-		<servlet-class>com.servlet.SessionExample</servlet-class>
+		<servlet-class>com.sessiontracking.SessionExample</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -72,7 +81,37 @@
 		<servlet-name>config</servlet-name>
 		<url-pattern>/configservlet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>createcookie</servlet-name>
+		<servlet-class>com.sessiontracking.CookieExample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>createcookie</servlet-name>
+		<url-pattern>/createcookie</url-pattern>
+	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>showcookie</servlet-name>
+		<servlet-class>com.sessiontracking.ShowCookie</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>showcookie</servlet-name>
+		<url-pattern>/showcookie</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>logout</servlet-name>
+		<servlet-class>com.sessiontracking.DeleteCookie</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+			
 	<context-param>
 		<param-name>dbName</param-name>
 		<param-value>com.mysql.jdbc.Driver</param-value>
